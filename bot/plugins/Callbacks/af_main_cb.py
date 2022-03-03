@@ -119,7 +119,7 @@ async def cb_navg(bot, update: CallbackQuery):
                     [
                         InlineKeyboardButton
                             (
-                                ☺︎
+                                
                             )
                     ]
                 )
