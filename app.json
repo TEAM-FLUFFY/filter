@@ -7,8 +7,8 @@
         "Filter",
         "Mongo DB"
     ],
-    "website": "https://github.com/TEAM-FLUFFY/Samantha-V2",
-    "repository": "https://github.com/TEAM-FLUFFY/Samantha-V2",
+    "website": "https://github.com/TEAM-FLUFFY/filter",
+    "repository": "https://github.com/TEAM-FLUFFY/filter",
     "success_url": "https://telegram.dog/ATHIF_E_F_X_T_G_OFFLINE",
     "env": {
         "APP_ID": {
