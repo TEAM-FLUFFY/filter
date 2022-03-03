@@ -47,9 +47,11 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('🏅𝐴𝐷𝐷 𝑀𝐸 𝑇𝑂 𝐴 𝐺𝑅𝑂𝑈𝑃🏅', url='t.me/MW_ShaajiAutoFilterBot?startgroup=true'),
-    ],[
-
+        InlineKeyboardButton('𝑜𝑤𝑛𝑒𝑟', url='https://t.me/ATHIF_E_F_X_P_G_OFFLINE'),
+        InlineKeyboardButton('𝑔𝑟𝑜𝑢𝑝', url='https://t.me/M_O_V_I_E_WORLD')
+    ],[     
+    ]]
+    
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await bot.send_message(
