@@ -73,17 +73,17 @@ async def auto_filter(bot: Client, update: Message):
             if file_size < 1024:
                 file_size = f"[{file_size} B]"
             elif file_size < (1024**2):
-                file_size = f"[{str(round(file_size/1024, 2))} KiB] "
+                file_size = f"[{str(round(file_size/1024, 2))} 𝐾𝐵] "
             elif file_size < (1024**3):
-                file_size = f"[{str(round(file_size/(1024**2), 2))} MiB] "
+                file_size = f"[{str(round(file_size/(1024**2), 2))} 𝑀𝐵] "
             elif file_size < (1024**4):
-                file_size = f"[{str(round(file_size/(1024**3), 2))} GiB] "
+                file_size = f"[{str(round(file_size/(1024**3), 2))} 𝐺𝐵] "
             
             
             file_size = "" if file_size == ("[0 B]") else file_size
             
             # add emoji down below inside " " if you want..
-            button_text = f"{file_size}{file_name}"
+            button_text = f"▫️ {file_size} 📁 {file_name}"
             
             
             if file_type == "video":
@@ -149,13 +149,13 @@ async def auto_filter(bot: Client, update: Message):
         if len_result != 1:
             result[0].append(
                 [
-                    InlineKeyboardButton("Next ⏩", callback_data=f"navigate(0|next|{query})")
+                    InlineKeyboardButton("✔︎", callback_data=f"navigate(0|next|{query})")
                 ]
             )
         
         # Just A Decaration
         result[0].append([
-            InlineKeyboardButton(f"🔰 Page 1/{len_result if len_result < max_pages else max_pages} 🔰", callback_data="ignore")
+            InlineKeyboardButton(f"☻︎1/{len_result if len_result < max_pages else max_pages} ☻︎", callback_data="ignore")
         ])
         
         
@@ -184,13 +184,13 @@ async def auto_filter(bot: Client, update: Message):
                 if ((len(ibuttons)%2) == 0):
                     ibuttons.append(
                         [
-                            InlineKeyboardButton(f"⚜ {chat_name} ⚜", url=invite_link)
+                            
                         ]
                     )
 
                 else:
                     ibuttons[-1].append(
-                        InlineKeyboardButton(f"⚜ {chat_name} ⚜", url=invite_link)
+                        
                     )
                 
             for x in ibuttons:
